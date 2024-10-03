@@ -1,0 +1,33 @@
+{
+    "name": "Quick Fill",
+    "version": "1.0.0",
+    "description": "A quick and easy way to fill out an account sign on form!",
+    "manifest_version": 3,
+    "author": "Daniel Alfaro",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Quick Fill"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs",
+        "declarativeContent"
+      ],
+
+     
+    
+      "background": {
+        "scrips": ["background.js"],
+        "persistent": false
+      },
+      "content_scripts": [
+        {
+          
+          "matches": ["<all_urls>"],
+          "js": ["document.js"]
+        }
+    ]
+    
+}
